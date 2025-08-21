@@ -121,6 +121,19 @@ table tr:hover {
 /* ===================== */
 /*        Logo           */
 /* ===================== */
+
+header {
+  background: linear-gradient(to right, #2a335d, #3c4c7a);
+  color: white;
+  padding: 60px 20px 30px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+
 .header-logo {
   position: absolute;
   top: 5px;
