@@ -11,7 +11,7 @@
           res.render('index2',{teste: resultado});
         };
 
-        this.formulario = async (req, res) => {
+        this.list = async (req, res) => {
           res.render('index')
         };
 

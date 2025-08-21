@@ -47,8 +47,10 @@ table {
 
 table th, table td {
   padding: 12px;
-  text-align: left;
+  text-align: center; /* centraliza tudo */
+  vertical-align: middle; /* garante alinhamento vertical no meio */
 }
+
 
 table th {
   background: var(--accent);
