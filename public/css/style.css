@@ -194,3 +194,15 @@ table tr:hover {
   text-align: right;
   margin-bottom: 15px;
 }
+
+.header-logo {
+  position: absolute;       /* Faz a imagem ficar acima do conteúdo normal */
+  top: 5px;                 /* Distância do topo da página */
+  left: 50%;                /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta exatamente no centro */
+  max-height: 80px;         /* Limita a altura da logo */
+  width: auto;              /* Mantém a proporção da imagem */
+  z-index: 1000;            /* Garante que fique acima de outros elementos */
+  pointer-events: auto;     /* Permite que clique ou hover funcione */
+}
+
