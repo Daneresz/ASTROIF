@@ -18,30 +18,8 @@ body {
   background: var(--bg-color);
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   color: var(--text-color);
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  color: #aaa;
-}
-
-/* ===================== */
-/*      Container        */
-/* ===================== */
-.container {
-  background: var(--card-color);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  width: 90%;
-  max-width: 1000px;
-  text-align: center;
 }
 
 /* ===================== */
@@ -50,123 +28,18 @@ body {
 h1 {
   text-align: center;
   color: var(--accent-light);
-  margin-bottom: 25px;
+  margin: 100px 0 25px 0;
   font-size: 2em;
-}
-
-/* ===================== */
-/*    Menu Navegação     */
-/* ===================== */
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.menu ul li a {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 25px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-.menu ul li a:hover {
-  background: linear-gradient(135deg, #5f90ff, #9bbfff);
-  transform: translateY(-2px);
-}
-
-/* ===================== */
-/*      Formulário       */
-/* ===================== */
-.form-group {
-  margin-bottom: 18px;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  color: #ddd;
-  font-weight: 500;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: #3b4670;
-  color: var(--text-color);
-  outline: none;
-  transition: box-shadow 0.3s ease;
-}
-
-.form-group input:focus {
-  box-shadow: 0 0 10px var(--shadow-color);
-}
-
-/* ===================== */
-/*        Botões         */
-/* ===================== */
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
-  margin: 4px;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-.btn {
-  background: linear-gradient(135deg, #28a745, #4bd166);
-  color: #fff;
-}
-
-.btn.edit {
-  background: linear-gradient(135deg, #ffc107, #ffd95e);
-  color: #000;
-}
-
-.btn.add {
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  color: #fff;
-}
-
-.btn.delete {
-  background: linear-gradient(135deg, #dc3545, #ff6b81);
-  color: #fff;
-}
-
-.btn.cancelar {
-  background: linear-gradient(135deg, #6c757d, #9a9ea1);
-  color: #fff;
 }
 
 /* ===================== */
 /*        Tabela         */
 /* ===================== */
 table {
-  width: 100%;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
   border-collapse: collapse;
-  margin-top: 25px;
   background: #3b4670;
   border-radius: 10px;
   overflow: hidden;
@@ -190,25 +63,88 @@ table tr:hover {
   background: rgba(79, 128, 255, 0.15);
 }
 
-.search {
-  text-align: right;
-  margin-bottom: 15px;
+/* ===================== */
+/*    Dropdown/Menu      */
+/* ===================== */
+.dropdown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
 }
 
+.dropbtn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+  background: linear-gradient(135deg, #5f90ff, #9bbfff);
+  transform: translateY(-2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--card-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  padding: 10px 0;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: linear-gradient(135deg, #5f90ff, #9bbfff);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===================== */
+/*        Logo           */
+/* ===================== */
 .header-logo {
-  position: absolute;       /* Faz a imagem ficar acima do conteúdo normal */
-  top: 5px;                 /* Distância do topo da página */
-  left: 50%;                /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta exatamente no centro */
-  max-height: 80px;         /* Limita a altura da logo */
-  width: auto;              /* Mantém a proporção da imagem */
-  z-index: 1000;            /* Garante que fique acima de outros elementos */
-  pointer-events: auto;     /* Permite que clique ou hover funcione */
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 80px;
+  width: auto;
+  z-index: 1000;
 }
 
-@media (max-width: 600px) {
-  .header-logo {
-    max-height: 60px; /* reduz a logo em telas menores */
-  }
+.centralizado {
+  display: flex;
+  flex-direction: column;   /* empilha um em cima do outro */
+  justify-content: center;  /* centraliza vertical */
+  align-items: center;      /* centraliza horizontal */
+  text-align: center;
+  min-height: 100vh;        /* ocupa a tela toda */
 }
 
+.centralizado h1 {
+  margin-bottom: 15px;      /* espaço entre o h1 e o p */
+  color: var(--accent-light);
+}
+
+.centralizado p {
+  color: var(--text-color);
+}
