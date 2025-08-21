@@ -5,5 +5,7 @@ const controle = new controller();
 
 router.get('/', controle.home)
 router.get('/teste', controle.teste)
+router.get('/aluno/lst', controle.list)
 router.post('/aluno/lst', controle.list)
+router.post('/formulario', controle.formulario)
 export default router

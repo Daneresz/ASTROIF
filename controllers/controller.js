@@ -15,5 +15,9 @@
           res.render('index')
         };
 
+        this.formulario = async (req, res) => {
+          res.render('index')
+        };
+
     }
  }
