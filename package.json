@@ -21,6 +21,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "mongodb": "^6.18.0",
     "mongoose": "8.3.4",
     "readline-sync": "^1.4.10"
   }
