@@ -5,6 +5,8 @@ const controle = new controller();
 
 router.get('/', controle.home)
 router.get('/teste', controle.teste)
+router.get('/aluno/add', controle.add)
+router.post('/aluno/add', controle.add)
 router.get('/aluno/lst', controle.list)
 router.post('/aluno/lst', controle.list)
 router.post('/formulario', controle.formulario)

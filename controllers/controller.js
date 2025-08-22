@@ -11,6 +11,10 @@
           res.render('index2',{teste: resultado});
         };
 
+        this.add = async (req, res) => {
+          res.render('index')
+        };
+        
         this.list = async (req, res) => {
           res.render('index')
         };

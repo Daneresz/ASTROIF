@@ -1,14 +1,35 @@
 <%-include('../cabecalho.ejs')%>
-<h1>Adicionar Aluno</h1>
-<div>
-    <a href="/aluno/lst">Listar</a>
+    <!-- Conteúdo principal (APÓS o <header>) -->
+<div class="form-card">
+    <div class="btn-secondary-wrapper">
+  <a href="/aluno/lst" class="btn-secondary">Listar Alunos</a>
 </div>
-    <form method="post">
-        <label>Nome:</label>
-            <input type="text" name="nome"><br> 
-        <label>Matrícula:</label>
-            <input type="text" name="matricula"><br>
-            <button type="submit">Cadastrar</button>
-    </form>
+  <h1>Adicionar Aluno</h1>
+
+  <form action="/aluno/add" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="matricula">Matrícula:</label>
+      <input type="text" id="matricula" name="matricula" required>
+    </div>
+
+    <div class="form-group">
+      <label for="turma">Turma:</label>
+      <input type="text" id="turma" name="turma" required>
+    </div>
+
+    <div class="form-group">
+      <label for="imagem">Foto (opcional):</label>
+      <input type="file" id="imagem" name="imagem" accept="image/*">
+    </div>
+
+    <button type="submit" class="btn-primary">Salvar Aluno</button>
+  </form>
+</div>
+
 
 <%-include('../rodape.ejs')%>
