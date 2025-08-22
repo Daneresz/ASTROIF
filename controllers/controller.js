@@ -12,7 +12,7 @@
         };
 
         this.list = async (req, res) => {
-          res.render('index')
+          res.render('/aluno/lst')
         };
 
         this.formulario = async (req, res) => {
