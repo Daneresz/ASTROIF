@@ -1,5 +1,5 @@
 {
-  "name": "astroif-site",
+  "name": "astroif",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,22 +7,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Daneresz/ASTROIF.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Daneresz/ASTROIF/issues"
-  },
-  "homepage": "https://github.com/Daneresz/ASTROIF#readme",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "mongodb": "^6.18.0",
-    "mongoose": "8.3.4",
+    "mongoose": "^8.3.4",
     "readline-sync": "^1.4.10"
   }
 }
